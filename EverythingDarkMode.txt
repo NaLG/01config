@@ -1,0 +1,34 @@
+Sumatra PDF:
+  Change shortcut:
+    "C:\Program Files\SumatraPDF\SumatraPDF.exe" -set-color-range #F0E0A0 #403020
+
+
+Visual Studio, Sublime Text: 
+  Easy, monokai
+
+
+PWM Flicker on your monitor below 100% brightness?  But 100% brightness is too bright?
+  Want to change brightness PER monitor in a multi-monitor setup?
+    PangoBright has got your back.
+
+Too Blue?
+  f.lux
+  Windows Night Mode (Better compatibility)
+
+Chrome:
+  Dark Reader extension
+
+Jupyter Notebook:
+  Refer to /jupyterNotebook.txt
+
+Windows 10:
+  As of this year?  Has a dark mode option for central windows utilities: Office, File Explorer, Settings.
+
+Excel:
+  Workaround - can set a background color per .xlsx file.  
+
+Beyond Compare, other utilities:
+  If no Dark mode is available in settings, often googling can yield someone's custom setup.
+
+
+

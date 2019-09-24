@@ -1,0 +1,239 @@
+
+****************************************************
+***   jupyter-notebook dark theme & cell width   ***
+****************************************************
+
+jupyterthemes
+
+# pip install jupyterthemes
+pip install --user jupyterthemes
+
+#jt -h
+#jt -t gruvboxd -f roboto -fs 12 -cellw 95%
+
+jt -t onedork -f roboto -fs 12 -cellw 90%
+
+jupyter-notebook.exe
+
+
+QOL:
+Change Jupyter Notebook starting path:
+
+#  https://stackoverflow.com/questions/35254852/how-to-change-the-jupyter-start-up-folder
+
+Open cmd (or Anaconda Prompt) and run jupyter notebook --generate-config.
+    This writes a file to C:\Users\username\.jupyter\jupyter_notebook_config.py.
+    Search for the following line in the file: #c.NotebookApp.notebook_dir = ''
+
+Replace by c.NotebookApp.notebook_dir = '/the/path/to/home/folder/'
+
+Make sure you use forward slashes in your path and use /home/user/ instead of ~/ for your home directory, backslashes could be used if placed in double quotes even if folder name contains spaces as such : "D:\yourUserName\Any Folder\More Folders\"
+
+Remove the # at the beginning of the line to allow the line to execute
+
+
+******************
+***   Python   ***
+******************
+
+anaconda is unwieldy for me
+
+so change permissions for default python.exe's directory:
+	add "Everyone" - read and write.
+
+From the command line
+
+python -m pip install --upgrade pip
+pip3 install --upgrade pip
+#pip3 install jupyter
+
+pip install --user jupyter pandas numpy matplotlib
+pip3 install --user jupyter pandas numpy matplotlib
+
+
+#project-dependent stuff
+pip install --user paho-mqtt pyserial 
+pip install --user cvxopt
+
+
+**********************************************
+***           Anaconda (Prompt)            ***
+**********************************************
+
+
+Install Anaconda (64 bt Windows)
+Anaconda Prompt
+
+Check 
+  python --version 
+Should be 3.7
+
+Install above pips
+
+May get this for jupyterthemes:
+  WARNING: The script lesscpy.exe is installed in 'C:\Users\nathaniel_gustafson\AppData\Roaming\Python\Python37\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The scripts jt.exe and jupyter-theme.exe are installed in 'C:\Users\nathaniel_gustafson\AppData\Roaming\Python\Python37\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+
+so jt:
+cd C:\Users\nathaniel_gustafson\AppData\Roaming\Python\Python37\Scripts
+jt -t onedork -f roboto -fs 12 -cellw 90%
+
+jupyter-notebook: Should be on command line.  Verify:
+which jupyter-notebook.exe
+  /c/Users/nathaniel_gustafson/AppData/Local/Continuum/anaconda3/Scripts/jupyter-notebook.exe
+
+
+
+******************************************
+***   Add Sublime Text 3 shortcuts!!   ***
+******************************************
+
+http://blog.rtwilson.com/how-to-get-sublime-text-style-editing-in-the-ipythonjupyter-notebook/
+
+
+Add this to bottom of <user-folder>/.jupyter/custom/custom.js :
+
+Beware the false quotes:
+  Do not want:  ‘sublime’, “notebook/js/cell”
+         Want:  'sublime', "notebook/js/cell"
+
+/**/
+// Thanks to Sven from same : 
+// http://blog.rtwilson.com/how-to-get-sublime-text-style-editing-in-the-ipythonjupyter-notebook/
+//
+//
+// diff:
+//        cell.Cell.options_default.cm_config.extraKeys["Ctrl-Enter"] = function(cm) {}
+//            cells[cl].code_mirror.setOption('extraKeys',
+//                        "Ctrl-Enter": function(cm){}
+//
+//console.log('loaded sublime custom.js');
+require(["codemirror/keymap/sublime", "notebook/js/cell", "base/js/namespace"],
+    function(sublime_keymap, cell, IPython) 
+    {
+    	cell.Cell.options_default.cm_config.keyMap = 'sublime';
+        cell.Cell.options_default.cm_config.extraKeys["Ctrl-Enter"] = function(cm) {}
+    	var cells = IPython.notebook.get_cells();
+    	for(var cl=0; cl< cells.length ; cl++)
+    	{
+    		cells[cl].code_mirror.setOption('keyMap', 'sublime');
+    		cells[cl].code_mirror.setOption('extraKeys',
+    				{
+    					//"Cmd-Enter": function(){},
+    					"Ctrl-Enter": function(cm){}
+                        //"Ctrl-Shift-D": function(){},
+                        //"Ctrl-D": function(){},
+                        //"Ctrl-Shift-Up": function(){},
+                        //"Ctrl-Shift-Down": function(){},
+    					//"Shift-Enter": function(){},
+    				});
+    	}
+    }
+);
+/**/
+
+
+Disable Chrome (or whatever browser) chortcuts for sublime features you want.
+eg. ctrl-d, ctrl-shift-d.
+Chrome extenstion Shortkeys (Custom Keyboard Shortcuts) lets you do just this:
+https://chrome.google.com/webstore/detail/shortkeys-custom-keyboard/logpjaacgmcbpdkdchjiaagddngobkck
+
+Be sure to activate in forms (Activation Options under Shortcut)
+
+and reload JN
+
+
+
+***************************************************
+***          Variously Broken things            ***
+***************************************************
+
+
+
+***********************************************************
+***            jupyter-notebook widgets      (Buggy)    ***
+***********************************************************
+
+Cannot get this working on Windows. Graaaa
+  Turns out a JSON file is parsing wrongly {a,b,c,}  -error.
+    For a Solution:  Search the config files for the offending item.
+      # https://github.com/Jupyter-contrib/jupyter_nbextensions_configurator/issues/60
+
+Works just fine in WSL Ubuntu.
+
+???
+jupyter labextension install @jupyter-widgets/jupyterlab-manager
+
+???
+#https://github.com/jupyter-widgets/ipywidgets/issues/2083
+
+  Install nodeJS (https://nodejs.org/en/)
+  pip install ipywidgets
+  jupyter nbextension enable --py widgetsnbextension
+  jupyter labextension install @jupyter-widgets/jupyterlab-manager
+  (may need to restart your lab)
+
+
+
+************************************************************
+***     jupyter-notebook collapsible cells    (BROKEN)   ***
+************************************************************
+
+
+# https://forums.fast.ai/t/collapsable-expandable-jupyter-cells/205
+
+pip install jupyter_contrib_nbextensions
+pip3 install jupyter_contrib_nbextensions
+
+C:\Users\nathaniel_gustafson\AppData\Local\Programs\Python\Python37\Lib\site-packages\jupyter_contrib_nbextensions\nbextensions
+
+jupyter nbextension install collapsible_headings --user
+
+
+
+pip install jupyter_nbextensions_configurator
+pip3 install jupyter_nbextensions_configurator
+
+jupyter nbextensions_configurator enable --user
+
+
+When it ruins everything, and you're getting 500 server errors trying to open nb files,
+
+pip uninstall <both packages above>
+
+and then delete the nbextensions folders manually if you need to.  .../site-packages/.../nbextensions.
+
+delete them.
+
+
+
+
+
+******************************************************
+***   		   Code Folding	(not working)     		   ***
+******************************************************
+
+
+pip install jupyter_contrib_nbextensions
+jupyter contrib nbextension install --user
+
+pip install jupyter_nbextensions_configurator
+jupyter nbextensions_configurator enable --user
+
+pip install jupyter_contrib_nbextensions
+jupyter contrib nbextensions install --sys-prefix --skip-running-check
+
+conda install -c conda-forge jupyter_contrib_nbextensions
+
+https://stackoverflow.com/questions/33159518/collapse-cell-in-jupyter-notebook
+
+
+
+
+
+
+
+
+

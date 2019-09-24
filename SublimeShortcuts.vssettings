@@ -1,0 +1,166 @@
+﻿<UserSettings>
+  <ApplicationIdentity version="15.0"/>
+  <ToolsOptions>
+    <ToolsOptionsCategory name="Environment" RegisteredName="Environment"/>
+  </ToolsOptions>
+  <Category name="Environment_Group" RegisteredName="Environment_Group">
+    <Category name="Environment_KeyBindings" Category="{F09035F1-80D2-4312-8EC4-4D354A4BCB4C}" Package="{DA9FB551-C724-11d0-AE1F-00A0C90FFFC3}" RegisteredName="Environment_KeyBindings" PackageName="Visual Studio Environment Package">
+      <Version>15.0.0.0</Version>
+      <KeyboardShortcuts>
+        <ScopeDefinitions>
+          <Scope Name="Text Editor" ID="{8B382828-6202-11D1-8870-0000F87579D2}"/>
+          <Scope Name="HTML Editor Design View" ID="{CB3FCFEA-03DF-11D1-81D2-00A0C91BBEE3}"/>
+          <Scope Name="HTML Editor Source View" ID="{CB3FCFEB-03DF-11D1-81D2-00A0C91BBEE3}"/>
+        </ScopeDefinitions>
+        <DefaultShortcuts>
+          <Shortcut Command="View.ViewCode" Scope="Global">F7</Shortcut>
+          <Shortcut Command="View.ViewDesigner" Scope="Global">Shift+F7</Shortcut>
+        </DefaultShortcuts>
+        <ShortcutsScheme/>
+        <UserShortcuts>
+          <!-- Sublime Text shortcuts -->
+          <Shortcut Command="Edit.GoToFile" Scope="Global">Ctrl+P</Shortcut>
+          <Shortcut Command="View.CommandWindow" Scope="Global">Ctrl+Shift+P</Shortcut>   <!--Should be Command Palete-->
+          <Shortcut Command="File.OpenFile" Scope="Global">Ctrl+O</Shortcut>
+          <RemoveShortcut Command="Edit.SelectCurrentWord" Scope="Text Editor">Ctrl+W</RemoveShortcut>  <!--Enables Ctrl+W = Close Document at Global scope-->
+          <Shortcut Command="Window.CloseDocumentWindow" Scope="Global">Ctrl+W</Shortcut>
+          <Shortcut Command="Edit.IncreaseLineIndent" Scope="Text Editor">Ctrl+]</Shortcut>
+          <Shortcut Command="Edit.DecreaseLineIndent" Scope="Text Editor">Ctrl+[</Shortcut>
+          <!--<Shortcut Command="Edit.LineDelete" Scope="Text Editor">Ctrl+Shift+K</Shortcut>
+          <Shortcut Command="Edit.GotoBrace" Scope="Text Editor">Ctrl+M</Shortcut>  do not want - N -->
+          <Shortcut Command="Edit.MoveSelectedLinesUp" Scope="Text Editor">Ctrl+Shift+Up Arrow</Shortcut>
+          <Shortcut Command="Edit.MoveSelectedLinesDown" Scope="Text Editor">Ctrl+Shift+Down Arrow</Shortcut>
+          <Shortcut Command="Edit.Undo" Scope="Global">Ctrl+Z</Shortcut>
+          <Shortcut Command="Edit.Redo" Scope="Global">Ctrl+Y</Shortcut>
+          <!-- Multi-caret selection shortcuts -->
+          <!-- Install SelectNextOccurrence plugin for VS!  It enables these bad boys: -->
+          <Shortcut Command="SelectNextOccurrence.SelectNextOccurrence" Scope="Text Editor">Ctrl+D</Shortcut>
+          <!-- <Shortcut Command="Edit.SelectCurrentWord" Scope="Text Editor">Ctrl+D</Shortcut>  < ! - -  Fallback in case SelectNextOccurrence is not installed -->
+          <Shortcut Command="SelectNextOccurrence.ConvertSelectionToMultipleCursors" Scope="Text Editor">Ctrl+Shift+L</Shortcut>
+          <Shortcut Command="SelectNextOccurrence.SelectAllOccurrences" Scope="Text Editor">Alt+F3</Shortcut>
+          <Shortcut Command="SelectNextOccurrence.UndoOccurrence" Scope="Text Editor">Ctrl+U</Shortcut>
+          <Shortcut Command="SelectNextOccurrence.SkipOccurrence" Scope="Text Editor">Ctrl+K,Ctrl+D</Shortcut>
+          <!-- Other shortcuts -->
+          <Shortcut Command="Edit.Find" Scope="Text Editor">Ctrl+F</Shortcut>
+          <Shortcut Command="Edit.IncrementalSearch" Scope="Text Editor">Ctrl+E</Shortcut>
+          <Shortcut Command="Edit.FindinFiles" Scope="Global">Ctrl+Shift+F</Shortcut>
+          <Shortcut Command="Edit.Replace" Scope="Global">Ctrl+H</Shortcut>
+          <Shortcut Command="Edit.Replace" Scope="Global">Ctrl+Shift+E</Shortcut>
+          <Shortcut Command="Edit.GoToDefinition" Scope="Text Editor">F12</Shortcut>
+          <!--  
+<Shortcut Command="Window.NewWindow" Scope="Global">Ctrl+Shift+N</Shortcut>  < ! - - Bad match. Should open new blank text file - - >
+            do not want - N -->
+          <Shortcut Command="Edit.GotoBraceExtend" Scope="Text Editor">Ctrl+Shift+M</Shortcut>
+          <Shortcut Command="Edit.GoToSymbol" Scope="Global">Ctrl+R</Shortcut>
+          <Shortcut Command="Edit.GoToNextLocation" Scope="Global">F4</Shortcut>
+          <Shortcut Command="Edit.GoToPrevLocation" Scope="Global">Ctrl+F4</Shortcut>
+          <Shortcut Command="Edit.WordPrevious" Scope="Global">Ctrl+Left Arrow</Shortcut>
+          <Shortcut Command="Edit.WordNext" Scope="Global">Ctrl+Right Arrow</Shortcut>
+          <Shortcut Command="Edit.WordPreviousExtend" Scope="Global">Ctrl+Shift+Left Arrow</Shortcut>
+          <Shortcut Command="Edit.WordNextExtend" Scope="Global">Ctrl+Shift+Right Arrow</Shortcut>
+          <Shortcut Command="Edit.MakeLowercase" Scope="Text Editor">Ctrl+K, Ctrl+L</Shortcut>
+          <Shortcut Command="Edit.MakeUppercase" Scope="Text Editor">Ctrl+K, Ctrl+U</Shortcut>
+          <Shortcut Command="View.Fullscreen" Scope="Global">F11</Shortcut>
+          <Shortcut Command="Window.AutoHideAll" Scope="Global">Shift+F11</Shortcut>
+          <!--DistractionFree = Shift+F11 (Fullscreen, hide all windows, remove margins, remove tabs-->
+          <!-- 
+          <Shortcut Command="View.SolutionExplorer" Scope="Global">Ctrl+0</Shortcut>
+          <Shortcut Command="View.NavigateBackward" Scope="Global">Alt+-</Shortcut>
+          <Shortcut Command="View.NavigateForward" Scope="Global">Alt+Shift+-</Shortcut>
+           do not want - N -->
+          <RemoveShortcut Command="Window.ShowEzMDIFileList" Scope="Global">Ctrl+Alt+Down Arrow</RemoveShortcut>
+          <RemoveShortcut Command="InteractiveConsole.SearchHistoryNext" Scope="Interactive Window">Ctrl+Alt+Down Arrow</RemoveShortcut>
+          <RemoveShortcut Command="InteractiveConsole.SearchHistoryPrevious" Scope="Interactive Window">Ctrl+Alt+Up Arrow</RemoveShortcut>
+          <RemoveShortcut Command="Table.RowBelow" Scope="HTML Editor Design View">Ctrl+Alt+Down Arrow</RemoveShortcut>
+          <RemoveShortcut Command="Table.RowAbove" Scope="HTML Editor Design View">Ctrl+Alt+Up Arrow</RemoveShortcut>
+          <Shortcut Command="Edit.LineUpExtendColumn" Scope="Text Editor">Ctrl+Alt+Up Arrow</Shortcut>
+          <Shortcut Command="Edit.LineDownExtendColumn" Scope="Text Editor">Ctrl+Alt+Down Arrow</Shortcut>
+          <RemoveShortcut Command="EditorContextMenus.CodeWindow.Annotation.MoveToNextAnnotation" Scope="Text Editor">Ctrl+K, Ctrl+Right Arrow</RemoveShortcut>
+          <Shortcut Command="Window.NewVerticalTabGroup" Scope="Global">Ctrl+K, Ctrl+Right Arrow</Shortcut>
+          <Shortcut Command="Window.NewHorizontalTabGroup" Scope="Global">Ctrl+K, Ctrl+Down Arrow</Shortcut>
+          <!--  do not want - N -->
+          
+          <!--  These do not work - Frustrating.  F6 only. - N -->
+          <RemoveShortcut Command="Window.MovetoNextTabGroup" Scope="Global">Ctrl+PgDn</RemoveShortcut>
+          <RemoveShortcut Command="Window.MovetoPreviousTabGroup" Scope="Global">Ctrl+PgUp</RemoveShortcut>
+          <RemoveShortcut Command="Edit.ViewTopExtend" Scope="Global">Ctrl+Shift+PgUp</RemoveShortcut>
+          <RemoveShortcut Command="Edit.ViewBottomExtend" Scope="Global">Ctrl+Shift+PgDn</RemoveShortcut>
+          <RemoveShortcut Command="Window.NextSplitPane" Scope="Global">Ctrl+PgDn</RemoveShortcut>
+          <RemoveShortcut Command="Window.PreviousSplitPane" Scope="Global">Ctrl+PgUp</RemoveShortcut>
+          <RemoveShortcut Command="Window.MovetoNextTabGroup" Scope="Global">Ctrl+Shift+PgDn</RemoveShortcut>
+          <RemoveShortcut Command="Window.MovetoPreviousTabGroup" Scope="Global">Ctrl+Shift+PgUp</RemoveShortcut>
+          <RemoveShortcut Command="Window.NextSubpane" Scope="Global">Alt+Shift+PgDn</RemoveShortcut>
+          <RemoveShortcut Command="Window.PreviousSubpane" Scope="Global">Alt+Shift+PgUp</RemoveShortcut>
+          <!-- 
+          <Shortcut Command="Window.MovetoNextTabGroup" Scope="Global">Ctrl+K, Ctrl+Shift+Right Arrow</Shortcut>
+          <Shortcut Command="Window.MovetoPreviousTabGroup" Scope="Global">Ctrl+K, Ctrl+Shift+Left Arrow</Shortcut>
+          <Shortcut Command="Window.NextSubpane" Scope="Global">Ctrl+K, Ctrl+Right Arrow</Shortcut>
+          <Shortcut Command="Window.PreviousSubpane" Scope="Global">Ctrl+K, Ctrl+Left Arrow</Shortcut>
+          <Shortcut Command="OtherContextMenus.EasyMDIToolWindow.MoveAlltoPreviousTabGroup" Scope="Global">Ctrl+K, Ctrl+Down Arrow</Shortcut>
+           do not want - N -->
+          <!--Need VSTricks for CamelCase navigation, selection and deletion. Plus Duplicate line or selection -->
+          <Shortcut Command="Edit.SubWordNext" Scope="Text Editor">Alt+Right Arrow</Shortcut>
+          <Shortcut Command="Edit.SubWordPrevious" Scope="Text Editor">Alt+Left Arrow</Shortcut>
+          <Shortcut Command="Edit.SubWordNextExtend" Scope="Text Editor">Shift+Alt+Right Arrow</Shortcut>
+          <Shortcut Command="Edit.SubWordPreviousExtend" Scope="Text Editor">Shift+Alt+Left Arrow</Shortcut>
+          <Shortcut Command="Edit.SubWordNextExtendColumn" Scope="Text Editor">Ctrl+Shift+Right Arrow</Shortcut> 
+          <Shortcut Command="Edit.SubWordPreviousExtendColumn" Scope="Text Editor">Ctrl+Shift+Left Arrow</Shortcut> 
+          <Shortcut Command="Edit.SubWordDeletetoEnd" Scope="Text Editor">Alt+Del</Shortcut>   <!--Not actually implemented by Sublime-->
+          <Shortcut Command="Edit.SubWordDeletetoStart" Scope="Text Editor">Alt+Bkspce</Shortcut>   <!--Not actually implemented by Sublime-->
+
+          <RemoveShortcut Command="Debug.ParallelStacks" Scope="Global">Ctrl+Shift+D, S</RemoveShortcut>
+          <RemoveShortcut Command="Debug.ParallelWatch1" Scope="Global">Ctrl+Shift+D, 1</RemoveShortcut>
+          <RemoveShortcut Command="Debug.ParallelWatch2" Scope="Global">Ctrl+Shift+D, 2</RemoveShortcut>
+          <RemoveShortcut Command="Debug.ParallelWatch3" Scope="Global">Ctrl+Shift+D, 3</RemoveShortcut>
+          <RemoveShortcut Command="Debug.ParallelWatch4" Scope="Global">Ctrl+Shift+D, 4</RemoveShortcut>
+          <RemoveShortcut Command="Debug.Tasks" Scope="Global">Ctrl+Shift+D, K</RemoveShortcut>
+          <RemoveShortcut Command="OtherContextMenus.FSIConsoleContext.StopDebugging" Scope="Global">Ctrl+Shift+D, K</RemoveShortcut>
+          <!-- 
+          <Shortcut Command="Edit.DuplicateLineSelection" Scope="Text Editor">Ctrl+Shift+D</Shortcut>
+           does not exist? Use Duplicate instead - N -->
+          <Shortcut Command="Edit.Duplicate" Scope="Text Editor">Ctrl+Shift+D</Shortcut>
+          <RemoveShortcut Command="Edit.ViewTop" Scope="Text Editor">Ctrl+PgUp</RemoveShortcut>
+          <RemoveShortcut Command="Edit.ViewBottom" Scope="Text Editor">Ctrl+PgDn</RemoveShortcut>
+          <RemoveShortcut Command="View.NextView" Scope="HTML Editor Design View">Ctrl+PgDn</RemoveShortcut>
+          <RemoveShortcut Command="View.NextView" Scope="HTML Editor Source View">Ctrl+PgDn</RemoveShortcut>
+          <RemoveShortcut Command="Window.PreviousTab" Scope="HTML Editor Design View">Ctrl+PgUp</RemoveShortcut>
+          <RemoveShortcut Command="Window.PreviousTab" Scope="HTML Editor Source View">Ctrl+PgUp</RemoveShortcut>
+          <Shortcut Command="Window.NextTab" Scope="Global">Ctrl+Tab</Shortcut>
+          <Shortcut Command="Window.PreviousTab" Scope="Global">Ctrl+Shift+Tab</Shortcut>
+          <!-- 
+          <Shortcut Command="Window.NextDocumentWindow" Scope="Global">Ctrl+PgDn</Shortcut>
+          <Shortcut Command="Window.PreviousDocumentWindow" Scope="Global">Ctrl+PgUp</Shortcut>
+           do not want - N -->
+          <!--Unable to assign Toggle Line comment or Toggle Block comment. Must provide some shortcuts, since Ctrl+K,Ctrl+U is used above for MakeUpperCase-->
+          <Shortcut Command="Edit.CommentSelection" Scope="Text Editor">Ctrl+/</Shortcut>
+          <Shortcut Command="Edit.UncommentSelection" Scope="Text Editor">Ctrl+Shift+/</Shortcut>
+        </UserShortcuts>
+      </KeyboardShortcuts>
+    </Category>
+  </Category>
+</UserSettings>
+
+
+<!--
+
+Your settings were imported, but there are some warnings.
+
+'SelectNextOccurrence.SelectNextOccurrence' 
+'SelectNextOccurrence.ConvertSelectionToMultipleCursors' 
+'SelectNextOccurrence.SelectAllOccurrences' 
+'SelectNextOccurrence.UndoOccurrence' 
+'SelectNextOccurrence.SkipOccurrence' 
+'Edit.SubWordNext' 
+'Edit.SubWordPrevious' 
+'Edit.SubWordNextExtend' 
+'Edit.SubWordPreviousExtend' 
+'Edit.SubWordNextExtendColumn' 
+'Edit.SubWordPreviousExtendColumn' 
+'Edit.SubWordDeletetoEnd' 
+'Edit.SubWordDeletetoStart' 
+'Edit.DuplicateLineSelection' 
+  'Edit.Duplicate' 
+
+Error 1:  Failed to export settings for 'Account Selection' [code 6714]
+
+-->
