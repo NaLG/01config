@@ -62,3 +62,9 @@ Changes to Sublime's hotkeys
 ## SublimeShortcuts.vssettings
 Thanks to [justcla](https://github.com/justcla/SublimeVS) for Sublime shortcuts available in Visual Studio.  Made some tweaks here for my needs.
 
+## SublimeREPL.txt
+A Feeble attempt to get SublimeREPL to run Python directly out of Sublime Text.  Worked in conjunction with altztopy.ahk, temporarily.  Buggy at best.
+
+## /local/
+Local files, .gitignore'd
+

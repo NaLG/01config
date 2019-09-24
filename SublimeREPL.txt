@@ -1,0 +1,37 @@
+
+
+I got sublimeREPL to execute Python with alt-z for a line - it was a perfectly easy solution.
+
+But I rebooted and it broke.  So sad.
+
+
+
+https://stackoverflow.com/questions/19181999/how-to-create-a-keyboard-shortcut-for-sublimerepl
+
+https://stackoverflow.com/questions/19732006/how-to-run-python-code-on-sublimerepl/48410223
+
+https://stackoverflow.com/questions/19181999/how-to-create-a-keyboard-shortcut-for-sublimerepl
+
+
+
+
+some shortcuts for .sublime-keymap
+
+
+	{ "keys": ["ctrl+,", "s"], "command": "repl_transfer_current", "args": {"scope": "selection"}},
+	{ "keys": ["alt+d"], "command": "repl_transfer_current", "args": {"scope": "selection"}},
+	{ "keys": ["ctrl+shift+,", "s"], "command": "repl_transfer_current", "args": {"scope": "selection", "action":"view_write"}},
+	{ "keys": ["ctrl+,", "f"], "command": "repl_transfer_current", "args": {"scope": "file"}},
+	{ "keys": ["alt+f"], "command": "repl_transfer_current", "args": {"scope": "file"}},
+	{ "keys": ["shift+ctrl+,", "f"], "command": "repl_transfer_current", "args": {"scope": "file", "action":"view_write"}},
+	{ "keys": ["ctrl+,", "l"], "command": "repl_transfer_current", "args": {"scope": "lines"}},
+	{ "keys": ["alt+z"], "command": "repl_transfer_current", "args": {"scope": "lines"}},
+	{ "keys": ["shift+ctrl+,", "l"], "command": "repl_transfer_current", "args": {"scope": "lines", "action":"view_write"}},
+	{ "keys": ["ctrl+,", "b"], "command": "repl_transfer_current", "args": {"scope": "block"}},
+	{ "keys": ["shift+ctrl+,", "b"], "command": "repl_transfer_current", "args": {"scope": "block", "action":"view_write"}},
+
+
+
+
+
+
