@@ -1,0 +1,171 @@
+Packages to install:
+
+  Package control
+  RainbowCSV
+
+
+TODO: 
+  
+  Add more packages?
+
+*********************************************************************
+************                 User Settings:              ************
+*********************************************************************
+
+<<<<<<<<<<<<
+
+{
+	"font_size": 11,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+    
+    "always_show_minimap_viewport": true,
+
+}
+
+>>>>>>>>>>>>
+
+
+*********************************************************************
+************              User Key Bindings:             ************
+*********************************************************************
+
+<<<<<<<<<<<<
+
+[
+	{ "keys": ["ctrl+pagedown"], "command": "next_view_in_stack" },
+	{ "keys": ["ctrl+pageup"], "command": "prev_view_in_stack" },
+
+	{ "keys": ["ctrl+tab"], "command": "next_view" },
+	{ "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+	
+
+	{ "keys": ["ctrl+,", "s"], "command": "repl_transfer_current", "args": {"scope": "selection"}},
+	{ "keys": ["alt+d"], "command": "repl_transfer_current", "args": {"scope": "selection"}},
+	{ "keys": ["ctrl+shift+,", "s"], "command": "repl_transfer_current", "args": {"scope": "selection", "action":"view_write"}},
+	{ "keys": ["ctrl+,", "f"], "command": "repl_transfer_current", "args": {"scope": "file"}},
+	{ "keys": ["alt+f"], "command": "repl_transfer_current", "args": {"scope": "file"}},
+	{ "keys": ["shift+ctrl+,", "f"], "command": "repl_transfer_current", "args": {"scope": "file", "action":"view_write"}},
+	{ "keys": ["ctrl+,", "l"], "command": "repl_transfer_current", "args": {"scope": "lines"}},
+	{ "keys": ["alt+z"], "command": "repl_transfer_current", "args": {"scope": "lines"}},
+	{ "keys": ["shift+ctrl+,", "l"], "command": "repl_transfer_current", "args": {"scope": "lines", "action":"view_write"}},
+	{ "keys": ["ctrl+,", "b"], "command": "repl_transfer_current", "args": {"scope": "block"}},
+	{ "keys": ["shift+ctrl+,", "b"], "command": "repl_transfer_current", "args": {"scope": "block", "action":"view_write"}},
+
+	{ "keys": ["ctrl+alt+b"], "command": "run_existing_window_command", "args":
+		{
+		    "id": "repl_python_run",
+		    "file": "config/Python/Main.sublime-menu"
+		}
+	},
+
+
+	{
+		"keys": ["ctrl+alt+1"],
+		"command": "set_layout",
+		"args":
+		{
+			"cols": [0.0, 1.0],
+			"rows": [0.0, 1.0],
+			"cells": [[0, 0, 1, 1]]
+		}
+	},
+	{
+		"keys": ["ctrl+alt+2"],
+		"command": "set_layout",
+		"args":
+		{
+			"cols": [0.0, 0.5, 1.0],
+			"rows": [0.0, 1.0],
+			"cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
+		}
+	},
+	{
+		"keys": ["ctrl+alt+3"],
+		"command": "set_layout",
+		"args":
+		{
+			"cols": [0.0, 0.33, 0.66, 1.0],
+			"rows": [0.0, 1.0],
+			"cells": [[0, 0, 1, 1], [1, 0, 2, 1], [2, 0, 3, 1]]
+		}
+	},
+	{
+		"keys": ["ctrl+alt+4"],
+		"command": "set_layout",
+		"args":
+		{
+			"cols": [0.0, 0.25, 0.5, 0.75, 1.0],
+			"rows": [0.0, 1.0],
+			"cells": [[0, 0, 1, 1], [1, 0, 2, 1], [2, 0, 3, 1], [3, 0, 4, 1]]
+		}
+	},
+	{
+		"keys": ["ctrl+alt+8"],
+		"command": "set_layout",
+		"args":
+		{
+			"cols": [0.0, 1.0],
+			"rows": [0.0, 0.5, 1.0],
+			"cells": [[0, 0, 1, 1], [0, 1, 1, 2]]
+		}
+	},
+	{
+		"keys": ["ctrl+alt+9"],
+		"command": "set_layout",
+		"args":
+		{
+			"cols": [0.0, 1.0],
+			"rows": [0.0, 0.33, 0.66, 1.0],
+			"cells": [[0, 0, 1, 1], [0, 1, 1, 2], [0, 2, 1, 3]]
+		}
+	},
+	{
+		"keys": ["ctrl+alt+5"],
+		"command": "set_layout",
+		"args":
+		{
+			"cols": [0.0, 0.5, 1.0],
+			"rows": [0.0, 0.5, 1.0],
+			"cells":
+			[
+				[0, 0, 1, 1], [1, 0, 2, 1],
+				[0, 1, 1, 2], [1, 1, 2, 2]
+			]
+		}
+	},
+
+
+	{ "keys": ["ctrl+pageup"], "command": "focus_neighboring_group", "args": {"forward": false} },
+	{ "keys": ["ctrl+pagedown"], "command": "focus_neighboring_group" },
+	{ "keys": ["ctrl+shift+pageup"], "command": "move_to_neighboring_group", "args": {"forward": false} },
+	{ "keys": ["ctrl+shift+pagedown"], "command": "move_to_neighboring_group" },
+
+
+
+	{ "keys": ["ctrl+m", "ctrl+,"], "command": "fold" },
+	{ "keys": ["ctrl+m", "ctrl+."], "command": "unfold" },
+	{ "keys": ["ctrl+m", "ctrl+1"], "command": "fold_by_level", "args": {"level": 1} },
+	{ "keys": ["ctrl+m", "ctrl+2"], "command": "fold_by_level", "args": {"level": 2} },
+	{ "keys": ["ctrl+m", "ctrl+3"], "command": "fold_by_level", "args": {"level": 3} },
+	{ "keys": ["ctrl+m", "ctrl+4"], "command": "fold_by_level", "args": {"level": 4} },
+	{ "keys": ["ctrl+m", "ctrl+5"], "command": "fold_by_level", "args": {"level": 5} },
+	{ "keys": ["ctrl+m", "ctrl+6"], "command": "fold_by_level", "args": {"level": 6} },
+	{ "keys": ["ctrl+m", "ctrl+7"], "command": "fold_by_level", "args": {"level": 7} },
+	{ "keys": ["ctrl+m", "ctrl+8"], "command": "fold_by_level", "args": {"level": 8} },
+	{ "keys": ["ctrl+m", "ctrl+9"], "command": "fold_by_level", "args": {"level": 9} },
+
+	{ "keys": ["ctrl+m", "ctrl+l"], "command": "fold_by_level", "args": {"level": 1} },
+	{ "keys": ["ctrl+m", "ctrl+;"], "command": "unfold_all" },
+
+
+	{ "keys": ["ctrl+up"], "command": "scroll_lines", "args": {"amount": 6.0 } },
+	{ "keys": ["ctrl+down"], "command": "scroll_lines", "args": {"amount": -6.0 } },
+
+
+]
+
+
+>>>>>>>>>>>>
