@@ -1,0 +1,391 @@
+
+
+
+The Quick Brown Fox Jumps Over The Lazy Dog.
+
+
+Generally not use Shift for keys - 
+	Use autoshift.  Or,
+	Use a mod-layer instead.
+		Thus custom keys
+
+One layer for:
+ 	MAINLY characters
+ *	MAINLY symbols  (transient)
+ *	MAINLY navigation (transient, persistent)
+ *	Numpad (transient, persistent)
+
+
+
+Layers:
+  characters
+    Norman
+    common symbols, numbers (012)
+  symbols  (transient)
+  navigation (transient, persistent)
+    Arrows +_ modifiers available on left
+      (split load)
+    Some common characters (D, ctrl+C,V,X,Z)
+    Functions (F3, F5, Volume up/down, Mute)
+  Numpad (transient, persistent)
+    Functions (F3, F5, Volume up/down, Mute)
+
+
+Clever:
+  Bind LT->X to ,./;
+  Brackets:
+    Single tap: (
+    Double tap: [
+    Triple tap: {
+
+
+Symbol combined frequency:
+  Organized, Shifted
+
+_ . " ' : ; [ ] ( ) , / = : 
+! ? $ { } + ^ * \ | ~ `
+
+
+   LH
+_ , . ' "
+- : ;
+
+   RH
+[ ] ( )
+{ } 
+* / = 
+| \ + 
+
+^/=:
+!?$
+<>
+~`
+
+asdffgasdfg
+asdfgasdfg
+ashtgasdfg
+
+
+- . ' :    LH
+_ , " ;
+
+[](){}   RH
+*/=
+|\+
+
+^/=:
+!?$
+<>
+
+~`
+
+
+ 1  2  3  4  5  6  7  8  9  0  -  = 
+  q  w  e  r  t  y  i  u  o  p  [  ]  \
+   a  s  d  f  g  h  j  k  l  ;  '  \n
+    z  x  c  v  b  n  m  ,  .  /       
+   
+  
+ 1  2  3  4  5  6  7  8  9  0  -  = 
+ q  w  e  r  t  y  i  u  o  p  [  ] 
+ a  s  d  f  g  h  j  k  l  ;  '  \n
+ z  x  c  v  b  n  m  ,  .  /       
+   
+ `  ᵒ  ᵒ  ᵒ  `  `  ᵒ  ᵒ  ᵒ  `  `  `  
+ ᵒ  O  O  o  ᵒ  ᵒ  o  O  O  ᵒ  ᵒ  ᵒ  `  
+ O  O  O  O  o  o  O  O  O  O  ᵒ  ᵒ  
+ ᵒ  ᵒ  o  O  ᵒ  ᵒ  O  o  ᵒ  ᵒ  ᵒ  ᵒ  
+
+
+
+ HIGH 
+   Base Layer
+   0-1 modifier
+
+ High
+   1 modifier + Base layer OR
+   0 modifier + 2ary layer
+
+Symb
+
+_ . " ' : ! ? [ ] ( ) , / 
+			HIGH
+
+= ; + 
+			High
+
+$ { } ^ * \ | ~ `
+			Low
+
+/s
+
+Navigation
+
+
+
+*********
+** Nav **  
+*********
+
+    del  bcksp  ret  space
+			HIGH
+	🡐🡒🡑🡓	HIGH
+	HmEnd	High
+	PgUpDn	High
+
+	Ctrl	HIGH
+	Shift	HIGH
+
+    Ctrl-Shift-D	High
+    Alt-Tab			High
+    Alt-Shift-Tab	low
+    Ctrl-Tab		High
+    Ctrl-Shift-Tab	High
+
+*********
+** Nav ** - * PREFER one handed *
+*********
+
+    del  bcksp
+			HIGH
+	🡐🡒🡑🡓	HIGH
+
+	PgUpDn	High
+	HmEnd	Med
+
+	Ctrl-🡑🡓			HIGH
+    Alt-Tab			High
+    Ctrl-Tab		High
+    Ctrl-Shift-Tab	High
+
+
+***************************************
+
+***************************************
+
+Common Modifiers A
+
+🕳
+	🡐🡒		HIGH			nav text
+	🡑🡓		High			alter selection
+
+ctrl
+	1-3		Low
+	D 		High 			Sublime Multi-match Edit
+    /		HIGH
+	Tab		HIGH			switch tabs (Chrome, Sublime)
+	🡑🡓		HIGH (base)		Scroll the page
+	🡐🡒		HIGH (base)		Move cursor
+	wdf
+	ast
+	zxcv
+	l
+
+Shift
+	A-Z		HIGH			Autoshift??
+    (Symbs)	HIGH			Autoshift??
+	🡑🡓		HIGH (base)		Text Select - lines
+	🡐🡒		HIGH (base)		Text Select - chars
+
+Alt
+			High			Menus
+	Tab		HIGH
+	🡐		High			Back (Chrome, Explorer)
+	F3		Med				Select all
+	🡐🡒		Low				Highlight
+	🡑🡓		Low				change case
+
+Alt-Shift
+  Pair
+	Tab		HIGH
+	1-8		Med 			Resize win
+
+  No Pair
+	🡐🡒🡑🡓	High			Move win
+
+Ctrl-Alt
+	1-4		Low				Sublime columns
+	🡑🡓		HIGH			Sublime Multi-Line Edit
+
+Ctrl-Shift
+	1-9		Med				Win Resize
+	🡑🡓		HIGH			Sublime line shift
+	PgUpDn	Low				Sublime tab move
+	🡐🡒🡑🡓	HIGH			Text Select
+	D 		High 			Sublime Multi-Line Edit
+	Tab		HIGH			switch tabs (Chrome, Sublime)
+	p		rare
+
+
+Ctrl-Shift-Alt
+	🡐🡒🡑🡓	High			Move Win
+
+Shift-Alt
+	🡐🡒🡑🡓	High			Move Win
+
+Win
+	🡐🡒		Medium			Dock Win
+	🡑🡓		Low				Dock Win
+	Tab		rare			Check desktops
+
+Win-Shift
+	🡐🡒		Medium			Change monitor Win
+
+
+
+
+
+***************************************
+
+***************************************
+
+
+
+
+ccvcvcvvvvvvvcvvvvvvvvvvvvvv
+
+
+
+
+
+
+
+
+
+
+
+
+
+Common Modifiers A - placement!
+
+🕳
+	🡐🡒		HIGH		0	nav text
+	🡑🡓		High		0	alter selection
+	🡐🡒🡑🡓	High			Move win
+
+ctrl
+	1-3		Low		m	0	Outlook
+	D 		High 		2	Sublime Multi-match Edit
+    /		HIGH	m	0	Comment 
+	Tab		HIGH			switch tabs (Chrome, Sublime)
+	🡑🡓		HIGH(b)	m	0	Scroll the page
+	🡐🡒		HIGH(b)	m	0	Move cursor
+	wdf		HIGH	m	0
+			 ...		2
+	ast		HIGH	m	0
+	zxcv	HIGH	m	0
+			 ...		2
+	l		HIGH	m	0
+	+-		Med				Zoom
+	HmEnd	Med				Top, Bottom
+
+Shift
+	A-Z		HIGH			Autoshift??
+    (Symbs)	HIGH			Autoshift??
+	🡑🡓		HIGH(b)			Text Select - lines
+	🡐🡒		HIGH(b)			Text Select - chars
+
+Alt
+			High			Menus
+	Tab		HIGH
+	🡐		High			Back (Chrome, Explorer)
+	F3		Med				Select all
+	🡐🡒		Low				Highlight
+	🡑🡓		Low				change case
+
+Alt-Shift
+  Pair
+	Tab		HIGH
+	1-8		Med 			Resize win
+
+  No Pair
+	🡐🡒🡑🡓	High			Move win
+
+Ctrl-Alt
+	1-4		Low				Sublime columns
+	🡑🡓		HIGH			Sublime Multi-Line Edit
+
+Ctrl-Shift
+	1-9		Med				Win Resize
+	D 		High 			Sublime Multi-Line Edit
+	🡑🡓		HIGH			Sublime line shift
+	PgUpDn	Low				Sublime tab move
+	🡐🡒🡑🡓	HIGH			Text Select
+	Tab		HIGH			switch tabs (Chrome, Sublime)
+	p		rare
+
+
+Ctrl-Shift-Alt
+	🡐🡒🡑🡓	High			Move Win
+
+Shift-Alt
+	🡐🡒🡑🡓	High			Move Win
+
+Win
+	🡐🡒		Medium			Dock Win
+	🡑🡓		Low				Dock Win
+	Tab		rare			Check desktops
+
+Win-Shift
+	🡐🡒		Medium			Change monitor Win
+
+
+
+
+***************************************
+
+***************************************
+
+
+
+xxcvvvvvvv
+ttttttttttttt
+
+
+Very, Very frequent:
+
+
+				🡑🡓     (move cursor)
+				🡑🡓     (move page)
+				🡑🡓     (select option)
+				🡐🡒    (move cursor)
+
+				🡓🡒🡑🡐  (End)
+				🡐🡓     (End)
+				🡓🡐🡑🡒  (Home)
+				🡓🡐     (End)
+
+Ctrl			🡐🡒    (move)
+Ctrl-Shift		🡐🡒    (select)
+Ctrl-Shift		🡑🡓     (move line)
+Ctrl			C, X
+				🡐🡒🡑🡓
+				Pgup, Pgdn, Alt-(tab+), 
+Ctrl			C, X
+
+
+wofes gl;gliteshetsg;hseoitse yyyyyyyh
+
+		D 		High 			Sublime Multi-Line Edit
+	Tab		HIGH			switch tabs (Chrome, Sublime)
+
+
+
+
+
+🡐🡒🡑🡓🡐🡒🡑🡓
+🡐🡐🡒🡒🡑🡓🡒🡐🡒🡑🡓🡑🡐🡒🡑🡓🡓
+🡐🡐🡐🡐🡐🡐🡐🡐
+🡐🡐🡐🡐🡐🡐🡐🡐
+🡐🡐🡐🡐🡐🡐🡐🡐
+🡒🡒🡒🡒🡒🡒🡒
+🡒🡒🡒🡒🡒🡒
+🡒🡒🡒🡒🡒🡒
+🡑🡑🡑🡑🡑🡑🡑🡑
+🡑🡑🡑🡑🡑🡑🡑🡑🡑
+🡑🡑🡑🡑🡑🡑
+🡓🡓🡓🡓🡓🡓🡓🡓🡓
+🡓🡓🡓🡓🡓🡓🡓🡓
+🡓🡓🡓🡓🡓🡓🡓🡓
+
+
