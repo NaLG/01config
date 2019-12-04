@@ -1,4 +1,4 @@
-
+y
 
 
 The Quick Brown Fox Jumps Over The Lazy Dog.
@@ -90,11 +90,74 @@ _ , " ;
  q  w  e  r  t  y  i  u  o  p  [  ] 
  a  s  d  f  g  h  j  k  l  ;  '  \n
  z  x  c  v  b  n  m  ,  .  /       
+
    
  `  ᵒ  ᵒ  ᵒ  `  `  ᵒ  ᵒ  ᵒ  `  `  `  
  ᵒ  O  O  o  ᵒ  ᵒ  o  O  O  ᵒ  ᵒ  ᵒ  `  
  O  O  O  O  o  o  O  O  O  O  ᵒ  ᵒ  
  ᵒ  ᵒ  o  O  ᵒ  ᵒ  O  o  ᵒ  ᵒ  ᵒ  ᵒ  
+
+
+
+Proposition for base layer:
+
+  
+ 1  2  3  4  5  6  7  8  9  0  /   
+ q  w  e  r  t  y  i  u  o  p  :   
+ a  s  d  f  g  h  bs rt l  k  '  
+ z  x  c  v  b  n  m  ,  .  j       
+
+  
+ 1  2  3  4  5      6  7  8  9  0  /   
+
+ q  w  e  r  t      y  i  u  o  p  :   
+ a  s  d  f  g      h  bs rt l  k  '  
+ z  x  c  v  b      n  m  ,  .  j       
+           .  .    .  .  
+        sh l1 .    .  l2 sp
+        |  |  dl   .  |  |
+
+
+
+ q  w  e  r  t      y  7  8  9   
+ a  s  d  f  g      h  4  5  6    
+ z  x  c  v  b      n  1  2  3  
+                       .  .  .      
+           .  .    .  .  
+        sh l1 .    .  l2 sp
+        |  |  dl   .  |  |
+
+
+
+
+normy?
+
+  
+ 1  2  3  4  5      6  7  8  9  0  /   
+
+ q  w  d  f  bs     rt u  r  l  k   
+ a  s  e  t  g      y  n  i  o  h   
+ z  x  c  v  b      p  m  ,  .  j       
+           .  .    .  .  
+        sh l1 .    .  l2 sp
+        |  |  dl   .  |  |
+
+
+normod?
+
+  
+ 1  2  3  4  5      6  7  8  9  0  /   
+
+ q  w  d  r  bs     rt u  f  l  p   
+ a  s  e  t  g      y  h  i  o  k   
+ z  x  c  v  b      n  m  ,  .  j       
+           .  .    .  .  
+        sh l1 .    .  l2 sp
+        |  |  dl   .  |  |
+
+
+
+
 
 
 
