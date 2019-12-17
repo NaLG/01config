@@ -47,8 +47,20 @@ CapsLock & s::switchDesktopToRight()
 CapsLock & a::switchDesktopToLeft()
 ;CapsLock & tab::switchDesktopToLastOpened()
 
-CapsLock & c::createVirtualDesktop()
-CapsLock & d::deleteVirtualDesktop()
+
+;   ^ for CTRL
+;   ! for ALT
+;   # for Windows Key
+;   + for Shift
+
+
+^#a::switchDesktopToLeft()
+^#s::switchDesktopToRight()
+^#q::MoveCurrentWindowToLeft()
+^#w::MoveCurrentWindowToRight()
+
+;CapsLock & c::createVirtualDesktop()
+;CapsLock & d::deleteVirtualDesktop()
 
 CapsLock & q::MoveCurrentWindowToLeft()
 CapsLock & w::MoveCurrentWindowToRight()

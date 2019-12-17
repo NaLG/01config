@@ -13,16 +13,35 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 
 $j::Send {Backspace}
+$^j::Send ^{Backspace}
+$!j::Send {Backspace}
+$+j::Send {Backspace}
 $/::Send {j}
 $+/::Send {J}
-$!/::Send {/}
-$!+/::Send {?}
+$^/::Send ^{J}
+$!/::Send !{J}
+;$!/::Send {/}
+;$!+/::Send {?}
+
+$Backspace::Send {:}
+$+Backspace::Send {;}
+$^Backspace::Send ^{;}
+$!Backspace::Send !{;}
 
 $k::Send {Return}
+$^k::Send ^{Return}
+$!k::Send !{Return}
+$+k::Send +{Return}
 $`;::Send `k
 $+`;::Send `K
-$!`;::Send `:
-$!+`;::Send `;
+$^`;::Send `^k
+$!`;::Send `!k
+;$!`;::Send `:
+;$!+`;::Send `;
+
+$Return::Send /
+$+Return::Send ?
+
 
 
 ;  <!Up  = left alt + up
