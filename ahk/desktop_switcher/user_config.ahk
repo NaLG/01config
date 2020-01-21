@@ -53,6 +53,14 @@ CapsLock & a::switchDesktopToLeft()
 ;   # for Windows Key
 ;   + for Shift
 
+^#f13::switchDesktopToLeft()
+^#f14::switchDesktopToRight()
+CapsLock & f13::MoveCurrentWindowToLeft()
+CapsLock & f14::MoveCurrentWindowToRight()
+f13::switchDesktopToLeft()
+f14::switchDesktopToRight()
+;f8::switchDesktopToLeft()
+;f9::switchDesktopToRight()
 
 ^#a::switchDesktopToLeft()
 ^#s::switchDesktopToRight()

@@ -70,5 +70,13 @@ A Feeble attempt to get SublimeREPL to run Python directly out of Sublime Text. 
 ## /local/
 Local files, .gitignore'd
 
-## Install:
-T-Clock
+
+## Install Other great utilities:
+T-Clock (You can fit date cleanly in there on the taskbar time)
+Taskbar Tweaker (don't group windows, ever!)
+translucenttb (if you want a translucent taskbar)
+PersistentWindows (from Ninjacrab.com)
+
+
+
+

@@ -18,10 +18,11 @@ $!j::Send {Backspace}
 $+j::Send {Backspace}
 $/::Send {j}
 $+/::Send {J}
-$^/::Send ^{J}
-$!/::Send !{J}
-;$!/::Send {/}
-;$!+/::Send {?}
+;$^/::Send ^{j}
+;$!/::Send !{j}
+$!/::Send {/}
+$!+/::Send {?}
+$^/::Send ^{/}
 
 $Backspace::Send {:}
 $+Backspace::Send {;}
@@ -39,8 +40,8 @@ $!`;::Send `!k
 ;$!`;::Send `:
 ;$!+`;::Send `;
 
-$Return::Send /
-$+Return::Send ?
+;$Return::Send /
+;$+Return::Send ?
 
 
 
