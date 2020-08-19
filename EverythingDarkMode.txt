@@ -30,5 +30,6 @@ Excel:
 Beyond Compare, other utilities:
   If no Dark mode is available in settings, often googling can yield someone's custom setup.
 
-
+Everything (the Search app):
+copy Everything.ini into C:\Users\<User>\AppData\Roaming\Everything\
 
