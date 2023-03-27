@@ -80,4 +80,5 @@ PersistentWindows (from Ninjacrab.com)
 ## Other Hacks:
 Power Plan keeps changing in Windows 10?  Schedule a Task to run 'powercfg /set... fwr13urfrweqru' regularly to fight back.  Start with 'powercfg /L'.
 
-
+## Mac:
+Adding hotkeys, BTT, sublime-text edits, and QMK keymap for mac navigation...
