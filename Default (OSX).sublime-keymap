@@ -1,0 +1,50 @@
+[
+  
+  { "keys": ["f3"], "command": "find_next" },
+  { "keys": ["shift+f3"], "command": "find_prev" },
+  { "keys": ["alt+f3"], "command": "find_all" },
+  { "keys": ["super+f3"], "command": "find_all" },
+
+  { "keys": ["ctrl+super+up"], "command": "select_lines", "args": {"forward": false} },
+  { "keys": ["ctrl+super+down"], "command": "select_lines", "args": {"forward": true} },
+
+
+  { "keys": ["shift+super+up"], "command": "swap_line_up" },
+  { "keys": ["shift+super+down"], "command": "swap_line_down" },
+
+  { "keys": ["ctrl+tab"], "command": "next_view" },
+  { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+  // { "keys": ["ctrl+tab"], "command": "next_os_tab" },
+  // { "keys": ["ctrl+shift+tab"], "command": "prev_os_tab" },
+
+
+  // { "keys": ["f12"], "command": "goto_definition" },
+  // { "keys": ["super+f12"], "command": "goto_definition", "args": {"side_by_side": true, "clear_to_right": true} },
+  // { "keys": ["shift+f12"], "command": "goto_reference" },
+  // { "keys": ["super+shift+f12"], "command": "goto_reference", "args": {"side_by_side": true, "clear_to_right": true} },
+  // { "keys": ["super+alt+down"], "command": "goto_definition" },
+  // { "keys": ["super+alt+shift+down"], "command": "goto_reference" },
+  // { "keys": ["super+shift+r"], "command": "goto_symbol_in_project" },
+
+  { "keys": ["alt+["], "command": "fold" },
+  { "keys": ["alt+]"], "command": "unfold" },
+
+  { "keys": ["alt+shift+m"], "command": "expand_selection", "args": {"to": "brackets"} },
+  { "keys": ["alt+m"], "command": "move_to", "args": {"to": "brackets"} },
+  // { "keys": ["shift+alt+a"], "command": "expand_selection", "args": {"to": "tag"}, "context":
+  //   [
+  //     { "key": "selector", "operator": "equal", "operand": "(text.html, text.xml) - source", "match_all": true }
+  //   ]
+  // },
+
+  { "keys": ["alt+up"], "command": "scroll_lines", "args": {"amount": 1.0} },
+  { "keys": ["alt+down"], "command": "scroll_lines", "args": {"amount": -1.0} },
+
+  { "keys": ["super+up"], "command": "scroll_lines", "args": {"amount": 1.0} },
+  { "keys": ["super+down"], "command": "scroll_lines", "args": {"amount": -1.0} },
+
+  { "keys": ["super+left"], "command": "move", "args": {"by": "words", "forward": false} },
+  { "keys": ["super+right"], "command": "move", "args": {"by": "word_ends", "forward": true} },
+
+
+]
