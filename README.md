@@ -82,3 +82,4 @@ Power Plan keeps changing in Windows 10?  Schedule a Task to run 'powercfg /set.
 
 ## Mac:
 Adding hotkeys, BTT, sublime-text edits, and QMK keymap for mac navigation...
+ 
