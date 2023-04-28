@@ -77,6 +77,7 @@ switchDesktopToLeft()
     Return
 }
 
+^!Left::SwitchDesktopToLeft()
 CapsLock & a::SwitchDesktopToLeft()
 
 switchDesktopToRight()
@@ -91,6 +92,7 @@ switchDesktopToRight()
     Return
 }
 
+^!Right::SwitchDesktopToRight()
 CapsLock & s::SwitchDesktopToRight()
 
 
