@@ -45,7 +45,7 @@ MoveCurrentWindowToLeft()
     Return
 }
 
-^#+Left::MoveCurrentWindowToLeft()
+^!+Left::MoveCurrentWindowToLeft()
 CapsLock & q::MoveCurrentWindowToLeft()
 
 
@@ -61,7 +61,7 @@ MoveCurrentWindowToRight()
     Return
 }
 
-^#+Right::MoveCurrentWindowToRight()
+^!+Right::MoveCurrentWindowToRight()
 CapsLock & w::MoveCurrentWindowToRight()
 
 
