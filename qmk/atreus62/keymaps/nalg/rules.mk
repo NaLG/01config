@@ -1,4 +1,4 @@
 # Bootloader selection
 # BOOTLOADER = caterina
 # BOOTLOADER = atmel-dfu
-BOOTLOADER = qmk-dfu  # works, 'with errors'
+BOOTLOADER = qmk-dfu # seems to work with qmk toolbox

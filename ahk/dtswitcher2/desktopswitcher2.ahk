@@ -1,4 +1,12 @@
-﻿;#SETUP START
+﻿
+
+;   ^ for CTRL
+;   ! for ALT
+;   # for Windows Key
+;   + for Shift
+
+
+;#SETUP START
 #NoEnv ; Recommended for performance and compatibility with future AutoHotkey releases.
 #SingleInstance force
 ListLines Off
@@ -37,7 +45,7 @@ MoveCurrentWindowToLeft()
     Return
 }
 
-^#+Left::MoveCurrentWindowToLeft()
+^!+Left::MoveCurrentWindowToLeft()
 CapsLock & q::MoveCurrentWindowToLeft()
 
 
@@ -53,7 +61,7 @@ MoveCurrentWindowToRight()
     Return
 }
 
-^#+Right::MoveCurrentWindowToRight()
+^!+Right::MoveCurrentWindowToRight()
 CapsLock & w::MoveCurrentWindowToRight()
 
 
@@ -69,6 +77,7 @@ switchDesktopToLeft()
     Return
 }
 
+^!Left::SwitchDesktopToLeft()
 CapsLock & a::SwitchDesktopToLeft()
 
 switchDesktopToRight()
@@ -83,6 +92,7 @@ switchDesktopToRight()
     Return
 }
 
+^!Right::SwitchDesktopToRight()
 CapsLock & s::SwitchDesktopToRight()
 
 
@@ -107,4 +117,14 @@ CapsLock & 6::switchDesktopByNumber(6)
 CapsLock & 7::switchDesktopByNumber(7)
 CapsLock & 8::switchDesktopByNumber(8)
 CapsLock & 9::switchDesktopByNumber(9)
+
+^!1::switchDesktopByNumber(1)
+^!2::switchDesktopByNumber(2)
+^!3::switchDesktopByNumber(3)
+^!4::switchDesktopByNumber(4)
+^!5::switchDesktopByNumber(5)
+^!6::switchDesktopByNumber(6)
+^!7::switchDesktopByNumber(7)
+^!8::switchDesktopByNumber(8)
+^!9::switchDesktopByNumber(9)
 
