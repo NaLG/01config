@@ -30,6 +30,7 @@ enum custom_keycodes {
 
 
 // mac bits
+#define MMOJI LCTL(LGUI(KC_SPC))  // can't pass mods through _T(), so BTT it to F18
 // KC_MISSION_CONTROL   KC_MCTL  Open Mission Control
 // KC_LAUNCHPAD   KC_LPAD  Open Launchpad
 
@@ -53,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
  RSFT_T(KC_F17),KC_Z  ,KC_X    ,KC_C    ,KC_V    ,KC_B ,LCTL(KC_LEFT),LCTL(KC_RGHT), KC_LPAD ,KC_F13 , KC_N    ,KC_M    ,KC_COMM ,KC_DOT,  KC_J, RSFT_T(KC_SLSH) ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
- KC_LGUI,KC_LALT,KC_LCTL,LCTL(LGUI(KC_SPC)),LCTL_T(KC_SPC),MO(_SYMB),LSFT_T(KC_F16),MO(_NAVA),KC_SPC  ,   TO(_NAVA),   MO(_FUNC),TO(_NAVA),KC_UP  ,RCTL_T(KC_MPLY)
+ LGUI_T(KC_F19),KC_LALT,KC_LCTL,MMOJI,LCTL_T(KC_SPC),MO(_SYMB),LSFT_T(KC_F16),MO(_NAVA),KC_SPC  ,   TO(_NAVA),   MO(_FUNC),TO(_NAVA),KC_UP  ,RCTL_T(KC_MPLY)
   // └────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
   ),
 
