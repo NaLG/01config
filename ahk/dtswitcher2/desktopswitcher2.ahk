@@ -118,6 +118,12 @@ CapsLock & 7::switchDesktopByNumber(7)
 CapsLock & 8::switchDesktopByNumber(8)
 CapsLock & 9::switchDesktopByNumber(9)
 
+CapsLock & F11::switchDesktopByNumber(1)
+CapsLock & F2::switchDesktopByNumber(2)
+CapsLock & F3::switchDesktopByNumber(3)
+CapsLock & F4::switchDesktopByNumber(4)
+CapsLock & F5::switchDesktopByNumber(5)
+
 ^!1::switchDesktopByNumber(1)
 ^!2::switchDesktopByNumber(2)
 ^!3::switchDesktopByNumber(3)
@@ -127,4 +133,17 @@ CapsLock & 9::switchDesktopByNumber(9)
 ^!7::switchDesktopByNumber(7)
 ^!8::switchDesktopByNumber(8)
 ^!9::switchDesktopByNumber(9)
+
+
+; Sometimes works, but freaks out and switches applications every hour or so
+;^F2:: ; CTRL + F2
+;Run, firefox.exe -new-window ; 
+;return
+
+
+;^F2::
+;{
+;    Run "C:\Program Files\Mozilla Firefox\firefox.exe" -new-window about:blank 
+;    Return
+;}
 
