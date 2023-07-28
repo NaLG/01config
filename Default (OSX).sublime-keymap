@@ -37,14 +37,30 @@
   //   ]
   // },
 
-  { "keys": ["alt+up"], "command": "scroll_lines", "args": {"amount": 1.0} },
-  { "keys": ["alt+down"], "command": "scroll_lines", "args": {"amount": -1.0} },
+  // pg up/down are done in BTT with alt+up/down
+  // { "keys": ["alt+up"], "command": "scroll_lines", "args": {"amount": 1.0} },
+  // { "keys": ["alt+down"], "command": "scroll_lines", "args": {"amount": -1.0} },
+  // { "keys": ["alt+up"], "command": "scroll_lines", "args": {"amount": 10.0} },
+  // { "keys": ["alt+down"], "command": "scroll_lines", "args": {"amount": -10.0} },
 
   { "keys": ["super+up"], "command": "scroll_lines", "args": {"amount": 1.0} },
   { "keys": ["super+down"], "command": "scroll_lines", "args": {"amount": -1.0} },
 
   { "keys": ["super+left"], "command": "move", "args": {"by": "words", "forward": false} },
   { "keys": ["super+right"], "command": "move", "args": {"by": "word_ends", "forward": true} },
+  { "keys": ["super+shift+left"], "command": "move", "args": {"by": "subwords", "forward": false, "extend": true} },
+  { "keys": ["super+shift+right"], "command": "move", "args": {"by": "subword_ends", "forward": true, "extend": true} },
+
+  { "keys": ["super+alt+ctrl+8"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+  { "keys": ["super+alt+ctrl+shift+8"], "command": "move_to", "args": {"to": "bol", "extend": true} },
+  { "keys": ["super+alt+ctrl+9"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+  { "keys": ["super+alt+ctrl+shift+9"], "command": "move_to", "args": {"to": "eol", "extend": true} },
+  // why tf do normal F keys >12 not register in sublime text.  idk.
+  // { "keys": ["super+shift+F12"], "command": "move_to", "args": {"to": "bol", "extend": true} },
+  // { "keys": ["F14"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+  // { "keys": ["shift+f14"], "command": "move_to", "args": {"to": "bol", "extend": true} },
+  // { "keys": ["f15"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+  // { "keys": ["shift+f15"], "command": "move_to", "args": {"to": "eol", "extend": true} },
 
 
 ]

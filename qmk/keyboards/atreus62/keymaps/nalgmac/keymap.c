@@ -66,6 +66,8 @@ enum custom_keycodes {
 // Plus other weird things, 
 //   Symbiosis with BetterTouchTool,
 //   the F13+ keys are BTT'd to do special things
+//   the F13+ keys are BTT'd to do special things
+//   the F13+ keys are BTT'd to do special things
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -95,9 +97,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤                               ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
      KC_TRNS    ,KC_TRNS    ,LGUI(KC_W) ,LAG(KC_SPC),RCS(KC_TAB),LCTL(KC_TAB)                              ,RSFT_T(KC_Y),KC_F14     ,KC_UP      ,KC_F15     ,KC_PGUP    ,KC_TRNS ,
   //├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤                               ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤              
-LT(_MCAPS,KC_CAPS),LGUI(KC_A),LGUI(KC_S),LGUI_T(KC_D),LSFT(KC_TAB),KC_TAB                                  ,RGUI_T(KC_H),KC_LEFT    ,KC_DOWN    ,KC_RGHT    ,KC_PGDN    ,KC_ENT  ,
+LT(_MCAPS,KC_CAPS),LGUI(KC_A),LGUI(KC_S),LGUI_T(KC_D),LSFT(KC_TAB),KC_TAB                                  ,RALT_T(KC_H),KC_LEFT    ,KC_DOWN    ,KC_RGHT    ,KC_PGDN    ,KC_ENT  ,
   //├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤                               ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
-     KC_TRNS    ,LGUI(KC_Z) ,LGUI(KC_X) ,LGUI(KC_C) ,LGUI(KC_V) ,LGUI(KC_SLSH)                             ,RALT_T(KC_N),KC_BTN1    ,KC_MS_U    ,KC_BTN2    ,KC_WH_U    ,KC_WH_L ,
+     KC_TRNS    ,LGUI(KC_Z) ,LGUI(KC_X) ,LGUI(KC_C) ,LGUI(KC_V) ,LGUI(KC_SLSH)                             ,RGUI_T(KC_N),KC_BTN1    ,KC_MS_U    ,KC_BTN2    ,KC_WH_U    ,KC_WH_L ,
   //├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤                               ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
      KC_TRNS    ,KC_TRNS    ,KC_TRNS    ,KC_TRNS    ,KC_TRNS    ,KC_TRNS    ,    KC_TRNS ,    TO(_BASE)    ,KC_BTN1     ,KC_MS_L    ,KC_MS_D    ,KC_MS_R    ,KC_WH_D    ,KC_WH_R 
   //└───────────┴───────────┴───────────┴───────────┴───────────┴───────────┘  └───────────┘ └───────────┘  └───────────┴───────────┴───────────┴───────────┴───────────┴───────────┘
@@ -109,13 +111,13 @@ LT(_MCAPS,KC_CAPS),LGUI(KC_A),LGUI(KC_S),LGUI_T(KC_D),LSFT(KC_TAB),KC_TAB       
   //┌───────────┬───────────┬───────────┬───────────┬───────────┬───────────┐                               ┌───────────┬───────────┬───────────┬───────────┬───────────┬───────────┐
      KC_TILD    ,KC_GRV     ,KC_AT      ,KC_HASH    ,KC_DLR     ,KC_CIRC                                   ,KC_ASTR     ,KC_CIRC    ,KC_AMPR    ,KC_UNDS    ,KC_MINS    ,KC_PLUS ,
   //├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤                               ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
-     KC_TRNS    ,KC_QUOT    ,KC_LBRC    ,KC_RBRC    ,KC_DQUO    ,KC_SCLN                                   ,KC_PSLS     ,KC_P7      ,KC_P8      ,KC_P9      ,KC_ASTR    ,KC_PIPE ,
+     KC_TRNS    ,KC_QUOT    ,KC_LBRC    ,KC_RBRC    ,KC_DQUO    ,KC_SCLN                                   ,KC_PSLS     ,KC_7       ,KC_8       ,KC_9       ,KC_ASTR    ,KC_PIPE ,
   //├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤                               ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤              
-     KC_TRNS    ,KC_EXLM    ,KC_LPRN    ,KC_RPRN    ,KC_QUOT    ,KC_COLN                                   ,KC_BSPC     ,KC_P4      ,KC_P5      ,KC_P6      ,KC_ASTR    ,KC_ENT  ,
+     KC_TRNS    ,KC_EXLM    ,KC_LPRN    ,KC_RPRN    ,KC_QUOT    ,KC_COLN                                   ,KC_BSPC     ,KC_4       ,KC_5       ,KC_6       ,KC_ASTR    ,KC_ENT  ,
   //├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤                               ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
-     KC_TRNS    ,KC_QUES    ,KC_LCBR    ,KC_RCBR    ,KC_BSLS    ,KC_SLSH                                   ,KC_TRNS     ,KC_P1      ,KC_P2      ,KC_P3      ,KC_COMM  ,RSFT_T(KC_SLSH) ,
+     KC_TRNS    ,KC_QUES    ,KC_LCBR    ,KC_RCBR    ,KC_BSLS    ,KC_SLSH                                   ,KC_TRNS     ,KC_1       ,KC_2       ,KC_3       ,KC_COMM  ,RSFT_T(KC_SLSH) ,
   //├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤                               ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
-     KC_TRNS    ,KC_TRNS    ,KC_TRNS    ,KC_TRNS    ,KC_TRNS    ,KC_TRNS    ,    KC_TRNS ,    TO(_BASE)    ,KC_SPC      ,KC_0       ,KC_P0      ,KC_DOT     ,KC_PENT    ,KC_RCTL 
+     KC_TRNS    ,KC_TRNS    ,KC_TRNS    ,KC_TRNS    ,KC_TRNS    ,KC_TRNS    ,    KC_TRNS ,    TO(_BASE)    ,KC_SPC      ,KC_0       ,KC_0       ,KC_DOT     ,KC_PENT    ,KC_RCTL 
   //└───────────┴───────────┴───────────┴───────────┴───────────┴───────────┘  └───────────┘ └───────────┘  └───────────┴───────────┴───────────┴───────────┴───────────┴───────────┘
   ),   
 

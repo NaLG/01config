@@ -29,6 +29,13 @@ qmk # exists!
 qmk setup
 
 
+// PERMISSIVE_HOLD is 
+// f'd up on mac after 0.20.8.  Permissive hold isn't working, can sidestep by shortening tapping_term but hacky.
+// TO BUILD
+//   git checkout 0.20.8
+//   make atreus62:nalgmac:flash
+
+
 make atreus62:default
 make atreus62:nalg
 make atreus62:nalg:flash # can do on native *nix
