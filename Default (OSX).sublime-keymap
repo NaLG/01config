@@ -3,7 +3,8 @@
   { "keys": ["f3"], "command": "find_next" },
   { "keys": ["shift+f3"], "command": "find_prev" },
   { "keys": ["alt+f3"], "command": "find_all" },
-  { "keys": ["super+f3"], "command": "find_all" },
+  { "keys": ["ctrl+f3"], "command": "find_all" },
+  // { "keys": ["super+f3"], "command": "find_all" },
 
   { "keys": ["ctrl+super+up"], "command": "select_lines", "args": {"forward": false} },
   { "keys": ["ctrl+super+down"], "command": "select_lines", "args": {"forward": true} },
