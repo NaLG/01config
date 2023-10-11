@@ -68,31 +68,31 @@ f14::switchDesktopToRight()
 
 ;^#a::switchDesktopToLeft()
 ;^#s::switchDesktopToRight()
-;^#q::MoveCurrentWindowToLeft()
-;^#w::MoveCurrentWindowToRight()
+;^#q::MoveCurrentWindowToLeftDesktop()
+;^#w::MoveCurrentWindowToRightDesktop()
 
 ;CapsLock & c::createVirtualDesktop()
 ;CapsLock & d::deleteVirtualDesktop()
 
 
-CapsLock & q::MoveCurrentWindowToLeft()
-CapsLock & m::MoveCurrentWindowToLeft()
-CapsLock & w::MoveCurrentWindowToRight()
-;!q::MoveCurrentWindowToLeft()
-;!m::MoveCurrentWindowToLeft()
-;!w::MoveCurrentWindowToRight()
-#!Left::MoveCurrentWindowToLeft()
-#!Right::MoveCurrentWindowToRight()
+CapsLock & q::MoveCurrentWindowToLeftDesktop()
+CapsLock & m::MoveCurrentWindowToLeftDesktop()
+CapsLock & w::MoveCurrentWindowToRightDesktop()
+;!q::MoveCurrentWindowToLeftDesktop()
+;!m::MoveCurrentWindowToLeftDesktop()
+;!w::MoveCurrentWindowToRightDesktop()
+#!Left::MoveCurrentWindowToLeftDesktop()
+#!Right::MoveCurrentWindowToRightDesktop()
 
 ;CapsLock & z::
 ;{
-;    MoveCurrentWindowToLeft()
+;    MoveCurrentWindowToLeftDesktop()
 ;    sleep 100
 ;    switchDesktopToLeft()
 ;}
 ;CapsLock & x::
 ;{
-;    MoveCurrentWindowToRight()
+;    MoveCurrentWindowToRightDesktop()
 ;    sleep 100
 ;    switchDesktopToRight()
 ;}
