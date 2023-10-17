@@ -67,13 +67,14 @@ CapsLock & w::MoveCurrentWindowToRight()
 
 switchDesktopToLeft()
 {
-    n := VD.getCurrentDesktopNum()
-    if n = 1
-    {
-        Return
-    }
-    n -= 1
-    VD.goToDesktopNum(n)
+    Send #^{Left}
+    ;n := VD.getCurrentDesktopNum()
+    ;if n = 1
+    ;{
+    ;    Return
+    ;}
+    ;n -= 1
+    ;VD.goToDesktopNum(n)
     Return
 }
 
@@ -82,13 +83,14 @@ CapsLock & a::SwitchDesktopToLeft()
 
 switchDesktopToRight()
 {
-    n := VD.getCurrentDesktopNum()
-    if n = % VD.getCount()
-    {
-        Return
-    }
-    n += 1
-    VD.goToDesktopNum(n)
+    Send #^{Right}
+    ;n := VD.getCurrentDesktopNum()
+    ;if n = % VD.getCount()
+    ;{
+    ;    Return
+    ;}
+    ;n += 1
+    ;VD.goToDesktopNum(n)
     Return
 }
 
