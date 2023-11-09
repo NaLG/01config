@@ -1,3 +1,4 @@
+#Requires AutoHotkey v1.1.33+
 #SingleInstance Force ; The script will Reload if launched while already running
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases
 #KeyHistory 0 ; Ensures user privacy when debugging is not needed
@@ -13,6 +14,7 @@ LastOpenedDesktop := 1
 hVirtualDesktopAccessor := DllCall("LoadLibrary", "Str", A_ScriptDir . "\VirtualDesktopAccessor.dll", "Ptr")
 global IsWindowOnDesktopNumberProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "IsWindowOnDesktopNumber", "Ptr")
 global MoveWindowToDesktopNumberProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "MoveWindowToDesktopNumber", "Ptr")
+global GoToDesktopNumberProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "GoToDesktopNumber", "Ptr")
 
 ; Main
 SetKeyDelay, 75
@@ -24,10 +26,11 @@ return
 
 ;
 ; This function examines the registry to build an accurate list of the current virtual desktops and which one we're currently on.
-; Current desktop UUID appears to be in HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\VirtualDesktops
 ; List of desktops appears to be in HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VirtualDesktops
+; On Windows 11 the current desktop UUID appears to be in the same location
+; On previous versions in HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\VirtualDesktops
 ;
-mapDesktopsFromRegistry() 
+mapDesktopsFromRegistry()
 {
     global CurrentDesktop, DesktopCount
 
@@ -35,7 +38,11 @@ mapDesktopsFromRegistry()
     IdLength := 32
     SessionId := getSessionId()
     if (SessionId) {
-        RegRead, CurrentDesktopId, HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\%SessionId%\VirtualDesktops, CurrentVirtualDesktop
+        RegRead, CurrentDesktopId, HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VirtualDesktops, CurrentVirtualDesktop
+        if ErrorLevel {
+            RegRead, CurrentDesktopId, HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\%SessionId%\VirtualDesktops, CurrentVirtualDesktop
+        }
+        
         if (CurrentDesktopId) {
             IdLength := StrLen(CurrentDesktopId)
         }
@@ -107,26 +114,14 @@ _switchDesktopToTarget(targetDesktop)
     ; Fixes the issue of active windows in intermediate desktops capturing the switch shortcut and therefore delaying or stopping the switching sequence. This also fixes the flashing window button after switching in the taskbar. More info: https://github.com/pmb6tz/windows-desktop-switcher/pull/19
     WinActivate, ahk_class Shell_TrayWnd
 
-    ; Go right until we reach the desktop we want
-    while(CurrentDesktop < targetDesktop) {
-        Send {LWin down}{LCtrl down}{Right down}{LWin up}{LCtrl up}{Right up}
-        CurrentDesktop++
-        OutputDebug, [right] target: %targetDesktop% current: %CurrentDesktop%
-    }
-
-    ; Go left until we reach the desktop we want
-    while(CurrentDesktop > targetDesktop) {
-        Send {LWin down}{LCtrl down}{Left down}{Lwin up}{LCtrl up}{Left up}
-        CurrentDesktop--
-        OutputDebug, [left] target: %targetDesktop% current: %CurrentDesktop%
-    }
+    DllCall(GoToDesktopNumberProc, Int, targetDesktop-1)
 
     ; Makes the WinActivate fix less intrusive
     Sleep, 50
     focusTheForemostWindow(targetDesktop)
 }
 
-updateGlobalVariables() 
+updateGlobalVariables()
 {
     ; Re-generate the list of desktops and where we fit in that. We do this because
     ; the user may have switched desktops via some other means than the script.
@@ -151,35 +146,15 @@ switchDesktopToRight()
 {
     global CurrentDesktop, DesktopCount
     updateGlobalVariables()
-    Send, #^{Right}
-    ;_switchDesktopToTarget(CurrentDesktop == DesktopCount ? 1 : CurrentDesktop + 1)
+    _switchDesktopToTarget(CurrentDesktop == DesktopCount ? 1 : CurrentDesktop + 1)
 }
 
 switchDesktopToLeft()
 {
     global CurrentDesktop, DesktopCount
     updateGlobalVariables()
-    Send, #^{Left}
-    ;_switchDesktopToTarget(CurrentDesktop == 1 ? DesktopCount : CurrentDesktop - 1)
+    _switchDesktopToTarget(CurrentDesktop == 1 ? DesktopCount : CurrentDesktop - 1)
 }
-
-MoveCurrentWindowToRight()
-{
-    global CurrentDesktop, DesktopCount
-    updateGlobalVariables()
-    ;MoveCurrentWindowToDesktop(CurrentDesktop == DesktopCount ? 1 : CurrentDesktop + 1)
-    MoveCurrentWindowToDesktop(CurrentDesktop == DesktopCount ? DesktopCount : CurrentDesktop + 1)
-}
-
-MoveCurrentWindowToLeft()
-{
-    global CurrentDesktop, DesktopCount
-    updateGlobalVariables()
-    ;MoveCurrentWindowToDesktop(CurrentDesktop == 1 ? DesktopCount : CurrentDesktop - 1)
-    MoveCurrentWindowToDesktop(CurrentDesktop == 1 ? 1 : CurrentDesktop - 1)
-}
-
-
 
 focusTheForemostWindow(targetDesktop) {
     foremostWindowId := getForemostWindowIdOnDesktop(targetDesktop)
@@ -211,10 +186,26 @@ getForemostWindowIdOnDesktop(n)
 
 MoveCurrentWindowToDesktop(desktopNumber) {
     WinGet, activeHwnd, ID, A
-    ;MsgBox, Before numproc: "%MoveWindowToDesktopNumberProc%", uint: "%UInt%", activeHwnd: "%activeHwnd%", DTnum: "%desktopNumber%"
     DllCall(MoveWindowToDesktopNumberProc, UInt, activeHwnd, UInt, desktopNumber - 1)
-    ;MsgBox, After numproc: "%MoveWindowToDesktopNumberProc%", uint: "%UInt%", activeHwnd: "%activeHwnd%", DTnum: "%desktopNumber%"
-    ;switchDesktopByNumber(desktopNumber)
+    switchDesktopByNumber(desktopNumber)
+}
+
+MoveCurrentWindowToRightDesktop()
+{
+    global CurrentDesktop, DesktopCount
+    updateGlobalVariables()
+    WinGet, activeHwnd, ID, A
+    DllCall(MoveWindowToDesktopNumberProc, UInt, activeHwnd, UInt, (CurrentDesktop == DesktopCount ? 1 : CurrentDesktop + 1) - 1)
+    _switchDesktopToTarget(CurrentDesktop == DesktopCount ? 1 : CurrentDesktop + 1)
+}
+
+MoveCurrentWindowToLeftDesktop()
+{
+    global CurrentDesktop, DesktopCount
+    updateGlobalVariables()
+    WinGet, activeHwnd, ID, A
+    DllCall(MoveWindowToDesktopNumberProc, UInt, activeHwnd, UInt, (CurrentDesktop == 1 ? DesktopCount : CurrentDesktop - 1) - 1)
+    _switchDesktopToTarget(CurrentDesktop == 1 ? DesktopCount : CurrentDesktop - 1)
 }
 
 ;
